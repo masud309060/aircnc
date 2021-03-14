@@ -1,0 +1,74 @@
+.home_sidebar > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_area {
+  background-color: #fff;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.input_area > label {
+  display: block;
+  font-size: 1.1rem;
+  color: #888;
+  font-weight: 600;
+} 
+
+.input_area > input {
+  display: block;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  padding: .125rem;
+}
+.input_arrival_departure {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+.input_arrival_departure > div {
+  background-color: #fff;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.input_arrival_departure > div > label {
+  display: block;
+  font-size: 1.1rem;
+  color: #888;
+  font-weight: 600;
+}
+.input_arrival_departure > div > input {
+  display: block;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  width: 140px;
+  padding: .125rem;
+}
+
+.guests_select > div{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.toggle_guests {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+  margin-bottom: .5rem;
+}
+.guests_select > div span {
+  margin: 0 0.75rem;
+}
+.guests_select > div button {
+  border: 0;
+  outline: 0;
+  background: none;
+  font-weight: bold;
+  font-size: 1.125rem;
+}

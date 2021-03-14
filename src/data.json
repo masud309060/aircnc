@@ -1,0 +1,133 @@
+{
+  "experiences": [
+    {
+      "_id": 1,
+      "category": "Nightlife",
+      "place": "New york",
+      "title": "Discover the city's party scene",
+      "image": "https://st2.depositphotos.com/1594308/5547/i/600/depositphotos_55474203-stock-photo-friends-dancing-at-party.jpg",
+      "pricePerPerson": 35,
+      "avgRating": 5,
+      "totalRating": 64
+    },
+    {
+      "_id": 2,
+      "category": "Entertainment",
+      "place": "Vancouver",
+      "title": "Tour with an Enthusiastic Local!",
+      "image": "https://www.urbanoyster.com/uploads/1/2/5/7/1257075/1-dsc2548_orig.jpg",
+      "pricePerPerson": 3,
+      "avgRating": 5,
+      "totalRating": 1
+    },
+    {
+      "_id": 3,
+      "category": "Photo class",
+      "place": "Los Angles",
+      "title": "Must Have L.A Pictures!",
+      "image": "https://i.pinimg.com/originals/49/e5/63/49e563288ef989213c2c7a54228a31a4.jpg",
+      "pricePerPerson": 39,
+      "avgRating": 4,
+      "totalRating": 179
+    },
+    {
+      "_id": 4,
+      "category": "Photography",
+      "place": "New york",
+      "title": "Retro Photoshoot in NYC",
+      "image": "https://greenweddingshoes.com/wp-content/uploads/2010/12/nyc-vintage-couple-10.jpg",
+      "pricePerPerson": 49,
+      "avgRating": 5,
+      "totalRating": 72
+    },
+    {
+      "_id": 5,
+      "category": "Nightlife",
+      "place": "New york",
+      "title": "Discover the city's party scene",
+      "image": "https://media.timeout.com/images/86991/image.jpg",
+      "pricePerPerson": 35,
+      "avgRating": 4,
+      "totalRating": 34
+    }
+  ],
+
+  "homes": [
+    {
+      "_id": 1,
+      "category": "Nightlife.",
+      "place":"New york",
+      "title": "Unique cob cottage",
+      "image": "https://images4.alphacoders.com/933/933592.jpg",
+      "price": 128,
+      "avgRating": 5,
+      "totalRating": 284
+    },
+    {
+      "_id": 2,
+      "category": "Nightlife.",
+      "place":"New york",
+      "title": "A joshua tree house",
+      "image": "https://www.bontraveler.com/wp-content/uploads/2020/01/DSC06991.jpg",
+      "price": 156,
+      "avgRating": 4,
+      "totalRating": 216
+    },
+    {
+      "_id": 3,
+      "category": "Nightlife.",
+      "place":"New york",
+      "title": "A pirates life for me- House boat!",
+      "image": "https://i.pinimg.com/originals/6d/f7/14/6df714b1dc6007885fc92c311ac61607.jpg",
+      "price": 128,
+      "avgRating": 5,
+      "totalRating": 284
+    },
+    {
+      "_id": 4,
+      "category": "Nightlife.",
+      "place":"New york",
+      "title": "Unique cob cottage",
+      "image": "https://www.traveldailymedia.com/assets/2019/09/Unique-Cob-Cottage-Mayne-Island-Canada.jpg",
+      "price": 128,
+      "avgRating": 5,
+      "totalRating": 284
+    },
+    {
+      "_id": 5,
+      "category": "Nightlife.",
+      "place":"New york",
+      "title": "Unique cob cottage",
+      "image": "https://i.pinimg.com/originals/7f/1e/0e/7f1e0e22002c06eff8d4846cc688172f.jpg",
+      "price": 128,
+      "avgRating": 5,
+      "totalRating": 284
+    },
+    {
+      "_id": 6,
+      "category": "Nightlife.",
+      "place":"New york",
+      "title": "A joshua tree house",
+      "image": "https://www.thejoshuatreehouse.com/wp-content/uploads/2015/09/House-livingroom-1.jpg",
+      "price": 128,
+      "avgRating": 5,
+      "totalRating": 284
+    }
+  ],
+  "apartment": [
+    {
+      "_id": 1,
+      "title": "Light bright airy stylish apt & safe peaceful stay",
+      "image": "",
+      "guest": 4,
+      "badroom": 2,
+      "bed": 2,
+      "bath": 2,
+      "kitchen": "Wifi Air conditional Kitchen",
+      "feature": "cancellation flexibility available",
+      "avgRating": 4.9,
+      "totalRating": 20,
+      "pricePerNight": 34 
+    }
+  ]
+}

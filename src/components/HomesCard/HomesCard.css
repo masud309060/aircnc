@@ -1,0 +1,25 @@
+.homes_card_main {
+  display: flex;
+}
+.homes_card {
+  width: 14rem;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+  font-size: 85%;
+}
+.homes_card > a > img {
+  width: 14rem;
+  height: 9rem;
+  border-radius: .25rem;
+}
+.homes_card > h6 {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+.homes_card > span {
+  color: gray;
+  font-size: .75rem;
+  margin: 0;
+}

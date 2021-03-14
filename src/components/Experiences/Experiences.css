@@ -1,0 +1,29 @@
+.experiences {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin-bottom: 1rem;
+}
+.experience_item {
+  width: 11rem;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+  font-size: 85%;
+}
+.experience_item > a > img {
+  width: 11rem;
+  height: 7rem;
+  border-radius: .25rem;
+}
+.experience_item > h6 {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+.experience_item > span {
+  color: gray;
+  font-size: .75rem;
+  margin: 0;
+}
