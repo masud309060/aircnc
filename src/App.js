@@ -5,13 +5,17 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import Hotels from './components/Hotels/Hotels';
 
 function App() {
   return (
     <Router className="app">
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
          <Home /> 
+        </Route>
+        <Route path="/hotel">
+         <Hotels /> 
         </Route>
       </Switch>
     </Router>
