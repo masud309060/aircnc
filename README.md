@@ -1,3 +1,5 @@
+[live link](https://aircnc-hotels.web.app/)
+
 ## front end 
 1. design all page *(onGoing)* 
 2. use react-multi carosel to manage experiencs and homes component. **(done)**
