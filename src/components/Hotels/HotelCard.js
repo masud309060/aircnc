@@ -1,13 +1,20 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { handleSelectHotel } from '../../redux/Actions/hotelsAction';
 import './HotelCard.css';
 
-const HotelCard = ({hotelData}) => {
+const HotelCard = ({hotelData, handleSelectHotel, selectedHotel}) => {
+  
   return (
-    <div className="hotel_card">
+    <div className="hotelhotels_card">
       {
-        hotelData.map(item => 
-          <Link to="/apartment">
+        hotelData && hotelData?.map(item => 
+          <Link 
+          to={`apartment/${item._id}`} 
+          onClick={() => handleSelectHotel(item)}
+          key={item._id} 
+          >
             <div className="hotel_card_item">
               <img src={item.image} alt=""/>
               <div className="hotel_card_item_info">
@@ -36,4 +43,16 @@ const HotelCard = ({hotelData}) => {
   );
 };
 
-export default HotelCard;
+const mapStatetoProps = state => {
+  return {
+    selectedHotel: state.hotels.selectedHotel
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    handleSelectHotel: (data) => dispatch(handleSelectHotel(data))
+  }
+}
+
+export default connect(mapStatetoProps, mapDispatchToProps)(HotelCard);

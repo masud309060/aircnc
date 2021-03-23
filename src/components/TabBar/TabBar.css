@@ -1,0 +1,18 @@
+.tab_bar {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  color: gray;
+}
+.tab_bar > div {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  color: #aaa;
+}
+.tab_bar > div.active {
+  color: #222;
+}
+.tab_bar > div > h5{
+  margin-right: 0.5rem;
+}

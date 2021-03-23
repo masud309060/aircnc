@@ -27,3 +27,9 @@
   font-size: .75rem;
   margin: 0;
 }
+.loading_gif {
+  display: block;
+  margin: 0 auto;
+  height: 8rem;
+  text-align: center;
+}

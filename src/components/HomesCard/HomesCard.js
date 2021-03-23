@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import './HomesCard.css';
 
 const HomesCard = ({homes}) => {
+  console.log(homes)
+
     const responsive = {
     desktop: {
       breakpoint: {
@@ -57,10 +59,18 @@ const HomesCard = ({homes}) => {
         swipeable
       >
         {
-          homes.map(homeData => 
+          homes.loading 
+          ? 
+          <img 
+          src="https://wpamelia.com/wp-content/uploads/2018/11/ezgif-2-6d0b072c3d3f.gif" 
+          alt="loading_gif"
+          className="loading_gif"
+          /> 
+          :
+          homes?.homes.map(homeData => 
             <div className="homes_card" key={homeData._id}>
               <Link to="/">
-                <img src={homeData.image} alt=""/>
+                <img src={homeData.image} alt={homeData.title}/>
                 <strong>{homeData.category}. {homeData.place}</strong>
               </Link>
               <h6>{homeData.title}</h6>

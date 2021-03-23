@@ -1,0 +1,22 @@
+.who_coming_page {
+  padding: 1rem;
+}
+.who_coming_page_info {
+  display: flex;
+  justify-content: space-between;
+}
+.who_coming_page_info > div {
+  display: flex;
+  flex-direction: column;
+  min-width: 4rem;
+  margin: 1rem 0;
+}
+.who_coming_page_info > div > p {
+  margin: 0; 
+}
+.user_photo {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  margin: auto;
+}

@@ -1,0 +1,18 @@
+.payment_area {
+  border: 1px solid #aaa;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.payment_credit_header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.payment_credit_header_img {
+  margin-right: 10px;
+}
+.payment_credit_header_img > img {
+  height: 1.5rem;
+  margin-left: 0.5rem;
+}

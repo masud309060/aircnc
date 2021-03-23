@@ -1,0 +1,32 @@
+.login_area {
+  padding: 2rem 1.5rem;
+  margin: 1rem 0;
+  box-shadow: -3px 8px 12px rgba(0, 0, 0, 0.2);
+
+}
+.login_option_change {
+  cursor: pointer;
+  color: #079992;
+  text-shadow: 1px 1px 1px #ddd;
+}
+.sign_in_with_google {
+  display: flex;
+  align-items: center;
+  padding: .5rem 1rem;
+  box-shadow: -3px 8px 12px rgba(0, 0, 0, 0.2);  
+}
+.sign_in_with_google > span {
+  flex: 1;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+.sign_in_with_google > i {
+  font-size: 3rem;
+}
+/* 
+#2bde8c
+#77ef4f
+
+#079992 */

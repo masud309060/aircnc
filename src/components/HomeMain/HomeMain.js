@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Experiences from '../Experiences/Experiences';
 import './HomeMain.css';
-import data from '../../data.json';
 import HomesCard from '../HomesCard/HomesCard';
+import { connect } from 'react-redux';
+import { fetchExperiences } from '../../redux/Actions/experiecesAction';
+import { fetchHomes } from '../../redux/Actions/homesAction';
+import { authStateChange } from '../../redux/Actions/authenticationActions';
 
-const HomeMain = () => {
-  const experiences = data.experiences;
-  const homes = data.homes;
-  
+
+
+const HomeMain = ({ experiences, homes , fetchExperiences, fetchHomes, authStateChange}) => {
+
+  useEffect(() => {
+    fetchExperiences()
+    fetchHomes()
+    authStateChange()
+  }, [])
+
   return (
     <div className="home_main">
       <h4>Experiences</h4>
@@ -18,4 +27,18 @@ const HomeMain = () => {
   );
 };
 
-export default HomeMain;
+const mapStateToProps = state => {
+  return {
+    experiences: state.experiences,
+    homes: state.homes
+  }
+}
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchExperiences: () => dispatch(fetchExperiences(dispatch)),
+    fetchHomes: () => dispatch(fetchHomes(dispatch)),
+    authStateChange: () => dispatch(authStateChange())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomeMain);

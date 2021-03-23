@@ -1,0 +1,33 @@
+.reserve_form {
+  border: 1px solid #ddd;
+  border-radius: .5rem;
+  padding: 2rem 1rem;
+  max-width: 340px;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reserve_form_reviews {
+  margin-bottom: .5rem;
+}
+.reserve_form_reviews > h5 {
+  color: #222;
+  font-weight: bold;
+}
+.reserve_form_dates > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.reserveForm_total_price > div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.25rem;
+  border-bottom: 1px solid #ddd;
+}

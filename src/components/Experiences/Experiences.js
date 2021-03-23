@@ -3,8 +3,9 @@ import ExperienceItem from './ExperienceItem';
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 
-const Experiences = (props) => {
-  const experiences = props.experiences
+
+const Experiences = ({ experiences }) => {
+  
   const responsive = {
     desktop: {
       breakpoint: {
@@ -34,7 +35,7 @@ const Experiences = (props) => {
   
   return (
     <div className="experiences">
-      <Carousel
+        <Carousel 
         additionalTransfrom={0}
         arrows
         autoPlaySpeed={3000}
@@ -57,7 +58,12 @@ const Experiences = (props) => {
         swipeable
       >
       {
-        experiences.map(experience => 
+        experiences?.loading ? <img 
+        src="https://wpamelia.com/wp-content/uploads/2018/11/ezgif-2-6d0b072c3d3f.gif" 
+        alt="loading_gif"  
+        className="loading_gif"
+        /> :
+        experiences.experiences.map(experience => 
           <ExperienceItem experience={experience} key={experience._id}/>
           )
         }
@@ -65,5 +71,6 @@ const Experiences = (props) => {
     </div>
   );
 };
+
 
 export default Experiences;

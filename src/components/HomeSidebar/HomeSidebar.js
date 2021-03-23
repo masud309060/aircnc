@@ -1,9 +1,11 @@
 import { Collapse } from '@material-ui/core';
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import { useHistory } from 'react-router';
+import { hotelsSearchKey } from '../../redux/Actions/hotelsAction';
 import './HomeSidebar.css';
 
-const HomeSidebar = () => {
+const HomeSidebar = ({searchItem, hotelsSearchKey}) => {
   const history = useHistory()
   const [expanded, setExpanded] = useState(true);
   const handleExpandClick = () => {
@@ -32,10 +34,14 @@ const HomeSidebar = () => {
         ...search,
         adult: adult,
         child: child,
+        guest: adult + child,
         fulfill: true
       })
-      history.push('/hotel')
-    }
+      if(search.fulfill) {
+        hotelsSearchKey(search)
+        history.push('/hotel')
+      }
+    } 
   }
   
   return (
@@ -133,4 +139,16 @@ const HomeSidebar = () => {
   );
 };
 
-export default HomeSidebar;
+const mapStateToProps = state => {
+  return {
+    searchItem: state.hotels.searchItem
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    hotelsSearchKey: (search) => dispatch(hotelsSearchKey(search))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomeSidebar);
