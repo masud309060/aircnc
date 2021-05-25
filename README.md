@@ -1,4 +1,10 @@
-[live link](https://aircnc-hotels.web.app/)
+<img src="https://i.imgur.com/QuV77Z5.png" alt="aircnc logo" height="100"/>
+
+## AirCnc (Hotels)
+descript is here will be updated latter... 
+
+[Live website](https://aircnc-hotels.web.app/)
+
 
 ## front end 
 1. design all page *(onGoing)* 

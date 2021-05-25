@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 const Apartment = ({ hotels, userData }) => {
   const match = hotels.selectedHotel;
 
+
   const featureList = [
     {
       id: 1,
@@ -38,6 +39,7 @@ const Apartment = ({ hotels, userData }) => {
 
   return (
     <div className="apartment">
+      <p>dihan abir</p>
       <Container>
         <SecondaryHeader />
       </Container>
