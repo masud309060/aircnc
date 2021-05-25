@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className="home container">
       <Header /> 
-      <h5 className="my-4">Where do you want to go </h5>
+      <h5 className="my-3">Where do you want to go </h5>
       <section className="row d-flex ">
         <div className="col-md-6 col-lg-4">
           <HomeSidebar /> 

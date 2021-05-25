@@ -28,11 +28,9 @@ export const fetchExperiences = () => {
   return async (dispatch) => {
     dispatch(fetchExperiencesRequest)
     try {
-      const res = await fetch('http://localhost:5000/api/experiences')
+      const res = await fetch('https://aircnc-server-4.herokuapp.com/api/experiences')
       const data = await res.json()
-      setTimeout(() => {
-        dispatch(fetchExperiencesSuccess(data))
-      }, 3000)
+      dispatch(fetchExperiencesSuccess(data))
     } catch (error) {
       dispatch(fetchExperiencesFailure(error.message))
     }

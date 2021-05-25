@@ -31,7 +31,7 @@ export const fetchHotels = () => {
   return async (dispatch) => {
     dispatch(fetchHotelsRequest)
     try {
-      const res = await fetch('http://localhost:5000/api/hotels')
+      const res = await fetch('https://aircnc-server-4.herokuapp.com/api/hotels')
       const data = await res.json()
         dispatch(fetchHotelsSuccess(data))
     } catch (e) {

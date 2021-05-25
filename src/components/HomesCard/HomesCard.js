@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import './HomesCard.css';
 
 const HomesCard = ({homes}) => {
-  console.log(homes)
 
     const responsive = {
     desktop: {
@@ -79,7 +78,7 @@ const HomesCard = ({homes}) => {
                 {Array(Math.ceil(homeData.avgRating))
                     .fill()
                     .map((_, i) => (
-                        <i key={i} style={{color: "#079992",marginRight:"1px"}} class="fas fa-star "> </i>
+                        <i key={i} style={{color: "#079992",marginRight:"1px"}} className="fas fa-star "> </i>
                     ))} {" "} 
                 {homeData.totalRating}
               </span>

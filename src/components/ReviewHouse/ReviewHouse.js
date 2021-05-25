@@ -64,7 +64,7 @@ const ReviewHouse = ({process, setProcess, searchItem}) => {
       <div className="review_house_note">
         {
           noteData.map(item => 
-            <div>
+            <div key={item._id}>
               <img src={item.img} alt={item.title}/>
               <p>{item.title}</p>
             </div>
@@ -72,7 +72,7 @@ const ReviewHouse = ({process, setProcess, searchItem}) => {
         }
       </div>
       <div className="review_house_read_more">
-        <strong>Read More </strong>
+        <strong>Read More</strong>
         <i class="fas fa-chevron-down"></i>
       </div>
       <button 

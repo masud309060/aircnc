@@ -2,30 +2,47 @@ import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import './ReserveForm.css';
 
-const ReserveForm = ({match, searchItem}) => {
+const ReserveForm = ({match, searchItem, show }) => {
   const history = useHistory()
   const [total, setTotal] = useState('')
-  const [diffDays, setDiffDays] = useState('')
+  const [diffDays, setDiffDays] = useState(1)
   
   useEffect(() => {
     const date1 = new Date(searchItem?.arrival);
     const date2 = new Date(searchItem?.departure);
     const diffTime = Math.abs(date2 - date1);
     const daysDiff = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
-    setDiffDays(daysDiff)
-    const totalPrice = match?.pricePerNight*diffDays+10+21;
+    if(1 <= daysDiff) {
+      setDiffDays(daysDiff)
+    }
+    let pricePerNight = match.pricePerNight;
+    let totalPrice = pricePerNight && (pricePerNight * daysDiff) + 10 + 21;
     setTotal(totalPrice)
   }, [])
-  console.log(match)
 
   return (
-    <div className="reserve_form">
-      <div className="reserve_form_reviews">
+    <div className="reserve_form mb-3">
+      <div className="reserve_form_reviews">  
+        {
+          show ? 
+          <>
           <h5>${match?.pricePerNight}/Night </h5>
           <span>
             <i class="fas fa-star" style={{color: "#079992", marginRight:".25rem"}}></i>  
             {match?.avgRating} ({match?.totalRating} reviews) 
           </span>
+          </> : 
+          <div className="reverse_form_card">
+            <div>
+              <h5>{match.title}</h5>
+              <span>
+                <i class="fas fa-star" style={{color: "#079992", marginRight:".25rem"}}></i>  
+                {match?.avgRating} ({match?.totalRating} reviews) 
+              </span>
+            </div>
+            <img src={match.image} alt={match.title} />
+          </div>
+        }
         </div>
         <div className="reserve_form_dates">
           <small>Dates</small>
@@ -57,18 +74,24 @@ const ReserveForm = ({match, searchItem}) => {
           </div>
           <div>
             <strong>Total</strong>
-            <strong>{total}</strong>
+            <strong>${total}</strong>
           </div>
         </div>
-        <button 
-        className="btn-gradiant w-100 rounded"
-        onClick={() => history.push("/order-process")}
-        >
-          Reserve
-        </button>
-        <div className="text-center text-secondary">
-          <small>You won't be changed yet</small>
-        </div>
+        {
+          show ? 
+            <>
+            <button 
+            className="btn-gradiant w-100 rounded"
+            onClick={() => history.push("/order-process")}
+            >
+              Reserve
+            </button>
+            <div className="text-center text-secondary">
+              <small>You won't be changed yet</small>
+            </div>
+            </> : "" 
+          
+        }
     </div>
   );
 };

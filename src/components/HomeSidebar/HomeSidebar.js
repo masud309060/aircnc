@@ -5,7 +5,7 @@ import { useHistory } from 'react-router';
 import { hotelsSearchKey } from '../../redux/Actions/hotelsAction';
 import './HomeSidebar.css';
 
-const HomeSidebar = ({searchItem, hotelsSearchKey}) => {
+const HomeSidebar = ({searchItem, hotelsSearchKey }) => {
   const history = useHistory()
   const [expanded, setExpanded] = useState(true);
   const handleExpandClick = () => {
@@ -21,7 +21,6 @@ const HomeSidebar = ({searchItem, hotelsSearchKey}) => {
   })
 
   const handleChange = (e) => {
-    console.log(e.target.value)
     setSearch({
       ...search,
       [e.target.name]: e.target.value
@@ -37,15 +36,13 @@ const HomeSidebar = ({searchItem, hotelsSearchKey}) => {
         guest: adult + child,
         fulfill: true
       })
-      if(search.fulfill) {
-        hotelsSearchKey(search)
-        history.push('/hotel')
-      }
+      hotelsSearchKey(search)
+      history.push('/hotel')
     } 
   }
   
   return (
-    <div className="home_sidebar mb-5">
+    <div className="home_sidebar">
       <form onSubmit={handleSubmit}>
         <div className="input_area input_location">
           <strong>LOCATION</strong>
@@ -122,7 +119,7 @@ const HomeSidebar = ({searchItem, hotelsSearchKey}) => {
             <button 
             type="button" 
             onClick={handleExpandClick} 
-            className="btn-outline d-block mt-3 ml-auto"
+            className="btn-outline d-block mt-1 ml-auto"
             > 
               APPLY 
             </button>

@@ -29,11 +29,9 @@ export const fetchHomes = () => {
   return async (dispatch) => {
     dispatch(fetchHomesRequest)
     try {
-      const res = await fetch('http://localhost:5000/api/homes')
+      const res = await fetch('https://aircnc-server-4.herokuapp.com/api/homes')
       const data = await res.json()
-      setTimeout(() => {
-        dispatch(fetchHomesSuccess(data))
-      },3000)
+      dispatch(fetchHomesSuccess(data))
     } catch (e) {
       dispatch(fetchHomesFailure(e.message))
     }

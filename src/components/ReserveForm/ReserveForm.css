@@ -31,3 +31,18 @@
   padding: 0.5rem 0.25rem;
   border-bottom: 1px solid #ddd;
 }
+
+/* order page */
+.reverse_form_card {
+  display: flex;
+
+}
+.reverse_form_card > img {
+  height: 5rem;
+  border-radius: 0.5rem;
+}
+.reverse_form_card > div > h5 {
+  font-weight: 700;
+  padding-right: 0.5rem;
+
+}

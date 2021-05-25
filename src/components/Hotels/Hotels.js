@@ -11,7 +11,7 @@ import Moment from 'react-moment';
 const Hotels = ({hotels, fetchHotels}) => {  
   useEffect(() => {
     fetchHotels();
-  }, [])
+  }, []) 
 
   return (
     <div className="hotels container">

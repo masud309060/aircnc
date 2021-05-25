@@ -12,8 +12,13 @@
 }
 .hotels_feature_btn_block {
   display: flex;
-  flex-wrap: wrap;
-  font-size: 90%;
+  justify-content: flex-start;
+  font-size: 85%;
+}
+@media (max-width: 768px) {
+  .hotels_feature_btn_block {
+    flex-wrap: wrap;
+  }
 }
 .hotels_feature_btn_block > button {
   border: 2px solid #ddd;

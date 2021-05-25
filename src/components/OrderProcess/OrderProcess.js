@@ -11,13 +11,11 @@ import WhoComing from '../WhoComing/WhoComing';
 import './OrderProcess.css';
 
 const OrderProcess = ({ hotels }) => {
-  console.log(hotels)
   const [process, setProcess] = useState({
     reviewHouse: false,
     whoComing: false,
     payment: false
   })
-
 
   return (
     <div>
@@ -37,7 +35,11 @@ const OrderProcess = ({ hotels }) => {
             }
           </Col>
           <Col md={5}>
-            <ReserveForm match={hotels.selectedHotel} searchItem={hotels.searchItem}/> 
+            <ReserveForm 
+            match={hotels.selectedHotel} 
+            searchItem={hotels.searchItem} 
+            show={false} 
+            /> 
           </Col>
         </Row>
       </Container>
