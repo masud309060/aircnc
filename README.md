@@ -3,8 +3,9 @@
 # AirCnc (Hotels)
 It's a hotel booking website. Fully responsive, fast, user-friendly site. In Home section user see a form where user fills up their location, arrival & departure date and number of guests. After search, users will see some hotel list. Users can select a hotel and see other necessary things. Over some simple steps, the user can book a hotel. 
 
-
 ### [Live website](https://aircnc-hotels.web.app/)
+
+![](https://raw.githubusercontent.com/masud309060/aircnc/main/public/images/aircnc.png) 
 
 
 ## Project Specifications 
