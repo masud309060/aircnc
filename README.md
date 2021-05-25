@@ -1,28 +1,47 @@
 <img src="https://i.imgur.com/QuV77Z5.png" alt="aircnc logo" height="100"/>
 
-## AirCnc (Hotels)
-descript is here will be updated latter... 
-
-[Live website](https://aircnc-hotels.web.app/)
+# AirCnc (Hotels)
+It's a hotel booking website. Fully responsive, fast, user-friendly site. In Home section user see a form where user fills up their location, arrival & departure date and number of guests. After search, users will see some hotel list. Users can select a hotel and see other necessary things. Over some simple steps, the user can book a hotel. 
 
 
-## front end 
-1. design all page *(onGoing)* 
-2. use react-multi carosel to manage experiencs and homes component. **(done)**
-3. google map ( demo ) *(pending)*
-4. payment proccess with strip or paypal 
-5. authentication page design and develop **(done)** 
-6. payment page design and develop 
+### [Live website](https://aircnc-hotels.web.app/)
+
+
+## Project Specifications 
+- Fully responsible, clean, and user-friendly UI. 
+- Use Awesome carousel in Experiences and homes component by **react-multi-carousel**. 
+- In home page after fill-up the form and search, users find some available hotels list on the hotel page. 
+- After selecting a hotel and ensure some precondition users book the hotel.
+- Authentication with email and google by using **firebase**. 
+- Automatic user detect system. 
+- Full state management with **react-redux**. 
+
+## front-end 
+1. React.js
+2. JSX 
+3. Redux && React-Redux 
+4. Redux-logger & Redux-thunk 
+5. React-router-dom 
+6. React-multi-carousel 
+7. React-moment 
+8. Bootstrap & React-Bootstrap  and so on. 
 
 ## back-end 
-1. create database and Rest api 
-2. admin panal 
-3. user panal 
-4. sign in and sign up with email and google by firebase. **(done)**
-5. payment manage with strip or paypal.  
+1. Node.js
+2. Express.js 
+3. MongoDB
+4. Mongoose 
+5. npm cors 
+6. npm shortId for default id genarate. 
+7. firebase for authentication. 
+8. Heroku 
 
 
-## functionallity 
-1. Athentication **(done)** 
-2. payment system 
-3. State management with redux & react-redux **(done)** 
+
+
+> Follow me on
+**[My Portfolio](https://portfolio-of-md-masud-rana.netlify.app/)** || 
+**[My LinkedIn](https://www.linkedin.com/in/masud309060/)** 
+
+
+
