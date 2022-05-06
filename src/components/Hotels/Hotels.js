@@ -6,7 +6,8 @@ import Map from '../Map/Map';
 import HotelCard from './HotelCard';
 import { connect } from 'react-redux';
 import { fetchHotels } from '../../redux/Actions/hotelsAction';
-import Moment from 'react-moment';
+import moment from "moment";
+
 
 const Hotels = ({hotels, fetchHotels}) => {  
   useEffect(() => {
@@ -20,9 +21,9 @@ const Hotels = ({hotels, fetchHotels}) => {
         <Col sm={12} md={6}>
           <div className="hotels_header">
             <small> 252 stays {" "}
-              <Moment format="MMM DD">{hotels.searchItem.arrival}</Moment>
+              <span>{moment(hotels.searchItem.arrival).format("MMM DD")}</span>
               -
-              <Moment format="DD">{hotels.searchItem.departure}</Moment> 
+              <span>{moment(hotels.searchItem.departure).format("DD")}</span>
               {" "} 
               ( {hotels.searchItem.guest} guests ) 
             </small>

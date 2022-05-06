@@ -43,7 +43,7 @@ const HotelCard = ({hotelData, handleSelectHotel, selectedHotel}) => {
   );
 };
 
-const mapStatetoProps = state => {
+const mapStateToProps = state => {
   return {
     selectedHotel: state.hotels.selectedHotel
   }
@@ -55,4 +55,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStatetoProps, mapDispatchToProps)(HotelCard);
+export default connect(mapStateToProps, mapDispatchToProps)(HotelCard);

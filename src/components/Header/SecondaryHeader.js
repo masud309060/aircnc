@@ -4,8 +4,8 @@ import { Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { signOut } from "../../redux/Actions/authenticationActions";
-import Moment from "react-moment";
 import moment from "moment";
+
 
 const SecondaryHeader = ({ loggedInUser, signOut, searchItem }) => {
   return (
@@ -19,8 +19,9 @@ const SecondaryHeader = ({ loggedInUser, signOut, searchItem }) => {
           <div className="nav_middle_item ml-auto">
             <strong>{searchItem.location}</strong>
             <strong>
-              <Moment format="MMM DD">{searchItem.arrival}</Moment>-
-              <Moment format="DD">{searchItem.departure}</Moment>
+              <span>{moment(searchItem.arrival).format("MMM DD")}</span>
+              -
+              <span>{moment(searchItem.departure).format("DD")}</span>
             </strong>
             <b>{searchItem.guest} Guests</b>
             <i class="fas fa-search text-gradiant"></i>
@@ -36,7 +37,7 @@ const SecondaryHeader = ({ loggedInUser, signOut, searchItem }) => {
                 Log in
               </Nav.Link>
             )}
-            
+
             {loggedInUser.authorise ? (
               <Nav.Link>
                 <button onClick={signOut} className="btn-gradiant">
